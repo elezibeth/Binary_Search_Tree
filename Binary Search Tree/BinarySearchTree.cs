@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace Binary_Search_Tree
 {
-    class BinarySearchTree
+    public class BinarySearchTree
     {
         public Node root;
         public Node parent;
         public Node childLeft;
         public Node childRight;
+        public List<Node> list;
 
 
         //Ctor
