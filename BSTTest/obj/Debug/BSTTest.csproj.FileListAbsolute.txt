@@ -1,0 +1,17 @@
+C:\Users\elezibeth\source\repos\Binary Search Tree\BSTTest\obj\Debug\BSTTest.csprojAssemblyReference.cache
+C:\Users\elezibeth\source\repos\Binary Search Tree\BSTTest\obj\Debug\BSTTest.csproj.CoreCompileInputs.cache
+C:\Users\elezibeth\source\repos\Binary Search Tree\BSTTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\elezibeth\source\repos\Binary Search Tree\BSTTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\elezibeth\source\repos\Binary Search Tree\BSTTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\elezibeth\source\repos\Binary Search Tree\BSTTest\bin\Debug\BSTTest.dll
+C:\Users\elezibeth\source\repos\Binary Search Tree\BSTTest\bin\Debug\BSTTest.pdb
+C:\Users\elezibeth\source\repos\Binary Search Tree\BSTTest\bin\Debug\Binary Search Tree.exe
+C:\Users\elezibeth\source\repos\Binary Search Tree\BSTTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\elezibeth\source\repos\Binary Search Tree\BSTTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\elezibeth\source\repos\Binary Search Tree\BSTTest\bin\Debug\Binary Search Tree.pdb
+C:\Users\elezibeth\source\repos\Binary Search Tree\BSTTest\bin\Debug\Binary Search Tree.exe.config
+C:\Users\elezibeth\source\repos\Binary Search Tree\BSTTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\elezibeth\source\repos\Binary Search Tree\BSTTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\elezibeth\source\repos\Binary Search Tree\BSTTest\obj\Debug\BSTTest.csproj.CopyComplete
+C:\Users\elezibeth\source\repos\Binary Search Tree\BSTTest\obj\Debug\BSTTest.dll
+C:\Users\elezibeth\source\repos\Binary Search Tree\BSTTest\obj\Debug\BSTTest.pdb
