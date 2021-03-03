@@ -1,0 +1,7 @@
+C:\Users\elezibeth\source\repos\Binary Search Tree\Binary Search Tree\bin\Debug\Binary Search Tree.exe.config
+C:\Users\elezibeth\source\repos\Binary Search Tree\Binary Search Tree\bin\Debug\Binary Search Tree.exe
+C:\Users\elezibeth\source\repos\Binary Search Tree\Binary Search Tree\bin\Debug\Binary Search Tree.pdb
+C:\Users\elezibeth\source\repos\Binary Search Tree\Binary Search Tree\obj\Debug\Binary Search Tree.csprojAssemblyReference.cache
+C:\Users\elezibeth\source\repos\Binary Search Tree\Binary Search Tree\obj\Debug\Binary Search Tree.csproj.CoreCompileInputs.cache
+C:\Users\elezibeth\source\repos\Binary Search Tree\Binary Search Tree\obj\Debug\Binary Search Tree.exe
+C:\Users\elezibeth\source\repos\Binary Search Tree\Binary Search Tree\obj\Debug\Binary Search Tree.pdb

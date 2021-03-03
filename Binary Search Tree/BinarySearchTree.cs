@@ -18,12 +18,23 @@ namespace Binary_Search_Tree
         //Ctor
         public BinarySearchTree()
         {
+            list = new List<Node>();
             //assign incoming node's parents swap these two
             //assign incoming node's root
            
         }
 
         //methods
+        //add node to list
+        public void Add(Node node)
+        {
+            if(list.Count == 0)
+            {
+                root = node;
+               
+            }
+            list.Add(node);
+        }
 
         //make root if none
 

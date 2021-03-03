@@ -13,6 +13,8 @@ namespace Binary_Search_Tree
         public Node childNodeRight;
         public Node parentNode;
         public Node rootNode;
+        
+        
 
         public Node(int number)
         {
@@ -22,7 +24,7 @@ namespace Binary_Search_Tree
 
         //methods
 
-        //assign root
+     
         //assign parent
         //assign children left or right
     }
