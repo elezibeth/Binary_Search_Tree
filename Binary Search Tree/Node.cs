@@ -15,6 +15,7 @@ namespace Binary_Search_Tree
         public Node rootNode;
         public int xAddress;
         public int yAddress;
+        public bool isARoot;
         
         
 

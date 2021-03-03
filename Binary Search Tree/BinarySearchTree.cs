@@ -13,7 +13,8 @@ namespace Binary_Search_Tree
         public Node childLeft;
         public Node childRight;
         public List<Node> list;
-        
+        public Node[,] nodeArray;
+
 
 
 
@@ -23,6 +24,7 @@ namespace Binary_Search_Tree
             list = new List<Node>();
             //assign incoming node's parents swap these two
             //assign incoming node's root
+            nodeArray = new Node[10, 10];
 
         }
 
@@ -33,9 +35,11 @@ namespace Binary_Search_Tree
             if (list.Count == 0)
             {
                 root = node;
+                node.isARoot = true;
                 list.Add(node);
+                node.xAddress = 0;
                 node.yAddress = 0;
-                node.yAddress = 0;
+                nodeArray[0, 0] = node;
 
             }
             else
@@ -43,19 +47,21 @@ namespace Binary_Search_Tree
                 list.Add(node);
                 //determine parent
                 Node atThisPoint = root;
-                Node someNode = DetermineParent(node, atThisPoint);
-                //locate someNode;s address
-                //node at address = someNode
+                DetermineParent(node, atThisPoint);
+                //locate parent Node;s address
+                //update with new child
+                UpdateParent(node);
                 //assign node an address based on parent's address
                 AssignNodeAddress(node, node.parentNode);
                 //Add node to data array at index
+                AddNodeToArray(node);
 
             }
 
         }
         public void AssignNodeAddress(Node nodeToAdd, Node nodeToCompare)
         {
-            if (nodeToAdd.number > nodeToCompare.Number)
+            if (nodeToAdd.number > nodeToCompare.number)
             {
                 int x = nodeToCompare.xAddress;
                 nodeToAdd.xAddress = ((x + 1) * 2) - 1;
@@ -83,36 +89,60 @@ namespace Binary_Search_Tree
                 }
             }
         }
+        public void AddNodeToArray(Node node)
+        {
+            int x = node.xAddress;
+            int y = node.yAddress;
+            nodeArray[x, y] = node;
+        }
+        public void UpdateParent(Node node)
+        {
+            
+            int evenOdd = node.xAddress % 2;
+            if(evenOdd != 1)
+            {
+                int x = node.parentNode.xAddress;
+                int y = node.parentNode.yAddress;
+                nodeArray[x, y].childNodeLeft = node;
+            }
+            else
+            {
+                int x = node.parentNode.xAddress;
+                int y = node.parentNode.yAddress;
+                nodeArray[x, y].childNodeRight = node;
+            }
+          
+        }
 
-            public Node DetermineParent(Node node, Node comparingNode)
+        public void DetermineParent(Node node, Node comparingNode)
+        {
+
+            if (node.number > comparingNode.number && comparingNode.childNodeRight != null)
             {
 
-                if (node.number > comparingNode.number && comparingNode.childNodeRight != null)
-                {
-
-                    comparingNode = comparingNode.childNodeRight;
-                    DetermineParent(node, comparingNode);
-                }
-                if (node.number > comparingNode.number && comparingNode.childNodeRight == null)
-                {
-                    node.parentNode = comparingNode;
-                    comparingNode.childNodeRight = node;
-                    return comparingNode;
+                comparingNode = comparingNode.childNodeRight;
+                DetermineParent(node, comparingNode);
+            }
+            if (node.number > comparingNode.number && comparingNode.childNodeRight == null)
+            {
+                node.parentNode = comparingNode;
+                comparingNode.childNodeRight = node;
 
 
-                }
-                if (node.number < comparingNode.number && comparingNode.childNodeLeft != null)//...
-                {
-                    comparingNode = comparingNode.childNodeLeft;
-                    DetermineParent(node, comparingNode);
-                }
-                if (node.number < comparingNode.number && comparingNode.childNodeLeft == null)//...
-                {
-                    node.parentNode = comparingNode;
-                    comparingNode.childNodeLeft = node;
-                    return comparingNode;
 
-                }
+            }
+            if (node.number < comparingNode.number && comparingNode.childNodeLeft != null)//...
+            {
+                comparingNode = comparingNode.childNodeLeft;
+                DetermineParent(node, comparingNode);
+            }
+            if (node.number < comparingNode.number && comparingNode.childNodeLeft == null)//...
+            {
+                node.parentNode = comparingNode;
+                comparingNode.childNodeLeft = node;
+
+
+            }
             if (node.number == comparingNode.number)
             {
 
@@ -126,7 +156,7 @@ namespace Binary_Search_Tree
                 {
                     node.parentNode = comparingNode;
                     comparingNode.childNodeRight = node;
-                    return comparingNode;
+
 
 
                 }
@@ -139,12 +169,13 @@ namespace Binary_Search_Tree
                 {
                     node.parentNode = comparingNode;
                     comparingNode.childNodeLeft = node;
-                    return comparingNode;
+
 
                 }
 
             }
 
+        }
     }
 }
             
