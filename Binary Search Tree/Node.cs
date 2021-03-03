@@ -13,6 +13,8 @@ namespace Binary_Search_Tree
         public Node childNodeRight;
         public Node parentNode;
         public Node rootNode;
+        public int xAddress;
+        public int yAddress;
         
         
 
