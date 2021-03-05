@@ -52,6 +52,54 @@ namespace Binary_Search_Tree
             }
 
         }
+        public Node Search(int number)
+        {
+            Node node = root;
+            Node nodeToReturn = SearchTwo(number, node);
+            return nodeToReturn;
+
+        }
+        public Node SearchTwo(int number, Node node)
+        {
+            
+            Node nodeTwo = SearchThree(node, number);
+            Node nodeThree = SearchThree(nodeTwo, number);
+            if (nodeTwo != nodeThree)
+            {
+                nodeThree = SearchTwo(number, nodeThree);
+            }
+
+            return nodeThree;
+          
+
+        }
+        public Node SearchThree(Node parentNode, int number)
+        {
+            Node node = parentNode;
+            if (node.number > number)
+            {
+                if (node.childNodeRight == null)
+                {
+                    Console.WriteLine("found it!");
+                }
+                else
+                {
+                    node = node.childNodeRight;
+                }
+            }
+            if (node.number < number)
+            {
+                if (node.childNodeLeft == null)
+                {
+                    Console.WriteLine("Found it!");
+                }
+                else
+                {
+                    node = node.childNodeLeft;
+                }
+            }
+            return node;
+        }
         public void AssignNodeAddress(Node nodeToAdd, Node nodeToCompare)
         {
             if (nodeToAdd.number > nodeToCompare.number)
